@@ -1,0 +1,180 @@
+// Bootstrap Button Variant
+
+.header {
+	background: @gray-darkest;
+	top: 0;
+  h1 {
+		font-size: 3.0 em;
+	}
+}
+
+section.intro {
+
+	border-bottom: 1px solid @gray-lighter;
+	padding-bottom: 10px;
+	text-align: center;
+
+	h2 {
+		color:@gray;
+		font-size: 2.4em;
+	}
+	h4{
+		color: @gray;
+		font-weight: 100;
+	}
+	p {
+		color:@gray-lighter;
+	}
+
+  footer {
+		i {
+			font-size: 1.2em;
+			margin-right: 5px;
+			&:hover {
+				background:@brand-primary;
+				border: 1px solid @link-blue;
+				color:@link-blue;
+				.transition
+			}
+		}
+	}
+
+	 .dados {
+		 text-align: left;
+		 a {
+			 color: @gray-darkest;
+		 	 }
+		 a:hover {
+				color: @link-blue;
+			}
+	 }
+}
+
+////////INTRO HEADER/////////
+
+.obj {
+	margin-left: 2.5em;
+
+	blockquote.objetivos p, h4 {
+	 font-size: 1.0em;
+	 color: @gray-lighter;
+	 }
+
+	.icons {
+		 span.titulos{
+			 font-size: 1.6em;
+		 }
+	}
+
+   .demo-icon {
+		 font-size: 1.8em;
+		 width:2.4em;
+	 }
+
+	.objetivos {
+		margin-left: 20px;
+		margin-top: 10px;
+	 a {
+		 color: @link-blue;
+	 }
+		 ul {
+			 margin-left: 20px;
+			 color: @gray-lighter;
+		 }
+	}
+	.hab-head  {
+		border-right: 1px  dotted @gray-lighter;
+		&:last-child {
+			border-right: none;
+		}
+		h4 {
+			color: @link-blue;
+		}
+
+		ul {
+
+		}
+
+	}
+}
+
+
+.button-variant(@color; @background; @border) {
+	color: @color;
+	background-color: @background;
+	border-color: @border;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	.open .dropdown-toggle& {
+		color: @color;
+		background-color: darken(@background, 10%);
+        border-color: darken(@border, 12%);
+	}
+	&:active,
+	&.active,
+	.open .dropdown-toggle& {
+		background-image: none;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			background-color: @background;
+			border-color: @border;
+		}
+	}
+
+.badge {
+		color: @background;
+		background-color: @color;
+	}
+}
+
+.radius(@corner: 10px){
+	-webkit-border-radius:@corner;
+	-moz-border-radius:@corner;
+    -o-border-radius:@corner;
+    -ms-border-radius:@corner;
+	border-radius: @corner;
+}
+
+.gradient() {
+    background: -moz-linear-gradient(left,  rgba(245,249,240,1) 0%, rgba(241,242,239,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(245,249,240,1)), color-stop(100%,rgba(241,242,239,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(245,249,240,1) 0%,rgba(241,242,239,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(245,249,240,1) 0%,rgba(241,242,239,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(245,249,240,1) 0%,rgba(241,242,239,1) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(245,249,240,1) 0%,rgba(241,242,239,1) 100%); /* W3C */
+}
+
+.transition(@efeito:0.4s) {
+    -webkit-transition:@efeito;
+	-moz-transition:@efeito;
+	-o-transition:@efeito;
+	-ms-transition:@efeito;
+}
+
+// Background Features
+
+/*.background-cover() {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}*/
+
+// Font Selections
+
+.body-font() {
+}
+
+.heading-font() {
+  font-family: 'Dosis', sans-serif;
+}
